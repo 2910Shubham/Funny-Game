@@ -1,0 +1,37 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+.container {
+  text-align: center;
+  background-color: #fff; /* White container background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for container */
+}
+
+button {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #4caf50; /* Green button background */
+  color: #fff; /* White text color */
+  padding: 15px 30px; /* Increased button size */
+  font-size: 16px; /* Font size for button text */
+  border: none;
+  border-radius: 5px;
+}
+
+#replyBox {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #3498db; /* Blue reply box background */
+  color: #fff; /* White text color */
+  border-radius: 5px;
+  font-weight: bold;
+}
