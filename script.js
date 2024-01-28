@@ -11,11 +11,22 @@ function getRandomReply() {
     'Iske liye Chutiya sabd Chhota hai'
   ];
 
-  if (nameInput.includes('shubham') || nameInput === 'shubham kumar mishra') {
-    replyElement.textContent = 'Ye Achchha Aadmi hai.';
-  } else {
-    const randomIndex = Math.floor(Math.random() * replies.length);
-    const randomReply = replies[randomIndex];
-    replyElement.textContent = randomReply;
-  }
+  fetch('http://sufficientfunctionaldemoware.viwanraj2810.repl.co/api/storeInput', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ id: Date.now(), name: nameInput }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
+  const randomIndex = Math.floor(Math.random() * replies.length);
+  const randomReply = replies[randomIndex];
+  replyElement.textContent = randomReply;
 }
